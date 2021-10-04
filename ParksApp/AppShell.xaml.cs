@@ -11,6 +11,7 @@ namespace ParksApp
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute(nameof(TestPage), typeof(TestPage));
             
         }
 

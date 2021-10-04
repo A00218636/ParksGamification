@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParksApp.Views;
+using System;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -11,8 +12,10 @@ namespace ParksApp.ViewModels
         {
             Title = "Welcome";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            GoToTestPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(TestPage)));
         }
 
         public ICommand OpenWebCommand { get; }
+        public ICommand GoToTestPageCommand { get; }
     }
 }
