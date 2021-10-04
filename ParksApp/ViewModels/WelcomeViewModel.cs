@@ -12,6 +12,8 @@ namespace ParksApp.ViewModels
         {
             Title = "Welcome";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+
+            //Code for Test page command
             GoToTestPageCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(TestPage)));
         }
 
