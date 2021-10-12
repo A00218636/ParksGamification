@@ -1,4 +1,5 @@
 ﻿
+using ParksApp.Services;
 using Xamarin.Forms;
 
 namespace ParksApp
@@ -9,6 +10,8 @@ namespace ParksApp
         public App()
         {
             InitializeComponent();
+
+            DependencyService.Register<ParkDataStore>();
 
             MainPage = new AppShell();
         }
