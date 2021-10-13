@@ -6,6 +6,7 @@ namespace ParksApp.Models
 {
     public class Park
     {
+        //Park attributes
         public int Id { get; set; }
 
         public string Name { get; set; }
