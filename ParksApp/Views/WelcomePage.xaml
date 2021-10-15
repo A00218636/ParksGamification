@@ -4,9 +4,38 @@
              x:Class="ParksApp.Views.WelcomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome!" BackgroundColor="Blue"
+            
+            <!--<Label
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"/>-->
+            <Label TextType="Html">
+                <Label.Text>
+                    
+                    <![CDATA[
+                    <h1>Welcome to the Parks Application!</h1><br/>
+                    <h2>Victoria Parks</h2><br/>
+                    <p>The city is home to a dynamic, thriving economy and vibrant arts and culture scene, with an unparalleled natural environment enjoyed by residents and visitors. It’s a place where sustainability, health and well-being are the cornerstones of creating a prosperous and inclusive future.</p>
+                    <br/>
+                    <p>Victoria has a wealth of natural and man-made riches, including stunning heritage architecture, ocean views and mountain vistas. It is this rare juxtaposition of heritage charm, scenic backdrop and modern city-scape that makes Victoria one of the most uniquely special places in Canada. Millions visit our city every year and enjoy the natural beauty, temperate climate and heritage charm Victoria offers its citizens every day.</p>
+                    <h3>Routes and Parking in Beacon Hill Park</h3>
+                    <p>In September 2021, Bridge Way reopened to vehicles to improve access to the central washrooms for people with disabilities. Bridge Way is open to two-way traffic from Heywood Way to just east of Chestnut Row and is shared by vehicles, pedestrians and cyclists.Bridge Way was closed to vehicles in spring 2020 to increase space for physical distancing during the provincial state of emergency, which has now ended.Arbutus Way and Chestnut Row remain as pedestrian/cycling routes and closed to vehicles, except for service vehicles.A total of 20 accessible parking stalls with new design and dimensions have been installed or upgraded in Beacon Hill Park, including two next to the central washrooms. These improvements enhance access and enjoyment of the park for all.</p><br/>
+                    <h3>Royal Athletic Park</h3>
+                    <p>A multi-purpose, fully-lit, natural grass stadium, Royal Athletic Park provides practice and playing space for local and visiting teams, and also hosts major sports and special events. It is home to the Victoria HarbourCats baseball team, and is also used by soccer and football teams. Royal Athletic Park often hosts special events, including the annual Rifflandia music festival and the Great Canadian Beer Festival.</p><br/>
+                    <h2><Parks by Neighbourhood</h2>
+                    <ul>
+                    <li>Fernwood</li>
+                    <li>Gonzales</li>
+                    <li>Fairfield</li>
+                    <li>James Bay</li>
+                    <li>Oakland</li>
+                    <li>Rockland</li>
+                    </ul>
+  
+                    ]]>
+               </Label.Text>
+            </Label>
         </StackLayout>
+      
+
     </ContentPage.Content>
 </ContentPage>

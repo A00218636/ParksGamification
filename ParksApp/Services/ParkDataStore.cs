@@ -8,6 +8,7 @@ namespace ParksApp.Services
 {
     class ParkDataStore : IParkDataStore<Park>
     {
+        private List<Park> parks;
         async Task Init()
         {
             await Task.Delay(100);
@@ -15,7 +16,7 @@ namespace ParksApp.Services
         public async Task<IEnumerable<Park>> GetParks()
         {
             await Init();
-            List<Park> parks = new List<Park>
+            parks = new List<Park>
             {
             new Park { Id = 1, Name = "Park A", Description = "Description of park a." },
             new Park { Id = 2, Name = "Park B", Description = "Description of park b." },
@@ -24,6 +25,13 @@ namespace ParksApp.Services
             };
 
             return parks;
+        }
+
+        public async Task<Park> GetPark(int parkId)
+        {
+            await Init();
+
+            return parks.Find(park => park.Id == parkId);
         }
     }
 }

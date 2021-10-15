@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -85,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ParksApp\ParksApp.csproj">
-      <Project>{2B1FA424-DC14-46FC-A530-8ACE335D01B2}</Project>
+      <Project>{D2F8C8C0-AE26-4AF3-A7EA-CC11D1163963}</Project>
       <Name>ParksApp</Name>
     </ProjectReference>
   </ItemGroup>

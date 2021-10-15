@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.CommunityToolkit.ObjectModel;
+using Xamarin.Forms;
 
 namespace ParksApp.ViewModels
 {
@@ -14,14 +15,36 @@ namespace ParksApp.ViewModels
         public ObservableRangeCollection<Park> Parks { get; set; }
 
         public AsyncCommand RefreshCommand { get; }
+        public AsyncCommand<Park> SelectedCommand { get; }
+
+        //private variable for the tapped value
+        Park selectedPark;
+
+
+        //public variable
+        public Park SelectedPark
+        {
+            get => selectedPark;
+            set => SetProperty(ref selectedPark, value);
+
+        }
 
         public ParksViewModel()
         {
             Title = "Parks";
 
             Parks = new ObservableRangeCollection<Park>();
+            LoadParks();
 
             RefreshCommand = new AsyncCommand(Refresh);
+            SelectedCommand = new AsyncCommand<Park>(Selected);
+        }
+
+        async Task Selected(Park park)
+        {
+            //await Application.Current.MainPage.DisplayAlert("Selected", park.Name, "OK");
+            string route = $"{nameof(Views.ParksDetailPage)}?ParkId={park.Id}";
+            await Shell.Current.GoToAsync(route);
         }
 
         private async Task Refresh()
@@ -41,6 +64,7 @@ namespace ParksApp.ViewModels
             //Parks.Add(new Park { Id = 4, Name = "Park D", Description = "Description of park d." });
 
             IEnumerable<Park> parks = await ParkDataStore.GetParks();
+
             Parks.AddRange(parks);
         }
     }

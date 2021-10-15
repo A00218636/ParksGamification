@@ -11,6 +11,7 @@ namespace ParksApp
             InitializeComponent();
             Routing.RegisterRoute(nameof(WelcomePage), typeof(WelcomePage));
             Routing.RegisterRoute(nameof(ParksPage), typeof(ParksPage));
+            Routing.RegisterRoute(nameof(ParksDetailPage), typeof(ParksDetailPage));
 
         }
 
